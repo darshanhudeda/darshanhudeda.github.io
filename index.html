@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darshan Hudeda — Security Lab</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent-net: #3fb950;
+    --accent-web: #d29922;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 0 20px 80px;
+  }
+  header {
+    max-width: 900px;
+    margin: 60px auto 40px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, #58a6ff, #3fb950);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  header p {
+    color: var(--text-dim);
+    margin-top: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .env-bar {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .env-bar span {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin: 36px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-net);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card.web { border-left-color: var(--accent-web); }
+  .card:hover {
+    transform: translateX(4px);
+    border-color: var(--accent);
+  }
+  .card .num {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-family: monospace;
+  }
+  .card h3 {
+    font-size: 1.05rem;
+    margin: 4px 0 6px;
+  }
+  .card .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Darshan Hudeda — Security Lab</h1>
+  <p>Hands-on attack-and-detect exercises across network infrastructure and web applications — each write-up covers method, evidence, findings, and how the activity would surface defensively.</p>
+</header>
+
+<div class="env-bar">
+  <span>🖥️ Kali Linux</span>
+  <span>🎯 Metasploitable 2</span>
+  <span>🐳 OWASP Juice Shop</span>
+  <span>🔌 VirtualBox Host-Only</span>
+  <span>🛠️ Nmap · Metasploit · Hydra · Burp Suite</span>
+</div>
+
+<main>
+  <div class="section-label">Network Exploitation</div>
+
+  <a class="card" href="writeups/01-vsftpd-backdoor.md">
+    <div class="num">01</div>
+    <h3>vsftpd 2.3.4 Backdoor</h3>
+    <span class="tag">CVE-2011-2523 · Supply-chain backdoor · Root access</span>
+  </a>
+
+  <a class="card" href="writeups/02-ssh-weak-credentials.md">
+    <div class="num">02</div>
+    <h3>SSH Weak Credentials & Legacy Crypto</h3>
+    <span class="tag">Credential brute-force · Crypto downgrade</span>
+  </a>
+
+  <a class="card" href="writeups/03-unrealircd-backdoor.md">
+    <div class="num">03</div>
+    <h3>UnrealIRCd 3.2.8.1 Backdoor</h3>
+    <span class="tag">CVE-2010-2075 · Supply-chain backdoor · Root access</span>
+  </a>
+
+  <div class="section-label">Web Application Security</div>
+
+  <a class="card web" href="writeups/04-xss-search.md">
+    <div class="num">04</div>
+    <h3>Reflected XSS in Search</h3>
+    <span class="tag">OWASP Juice Shop · DOM-based XSS</span>
+  </a>
+
+  <a class="card web" href="writeups/05-sqli-login.md">
+    <div class="num">05</div>
+    <h3>SQL Injection Authentication Bypass</h3>
+    <span class="tag">OWASP Juice Shop · Auth bypass · Admin access</span>
+  </a>
+</main>
+
+<footer>
+  Hosted on GitHub Pages · <a href="https://github.com/darshanhudeda">View GitHub Profile</a>
+</footer>
+
+</body>
+</html>
