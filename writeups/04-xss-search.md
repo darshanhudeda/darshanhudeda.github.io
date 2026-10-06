@@ -5,7 +5,7 @@ Determine if user input in the search feature is properly sanitized before being
 
 ## Method
 Payload entered into the Juice Shop search bar:
-<iframe src="javascript:alert('XSS')"> ```
+```<iframe src="javascript:alert('XSS')"> ```
 
 Target: OWASP Juice Shop (bkimminich/juice-shop), running locally via Docker on localhost:3000.
 
