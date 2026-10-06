@@ -10,7 +10,7 @@ Payload entered into the Juice Shop search bar:
 Target: OWASP Juice Shop (bkimminich/juice-shop), running locally via Docker on localhost:3000.
 
 Evidence
-![xss-serch](../images/04-unreal-getuid.png)
+![XSS alert triggered via search](../images/04-xss-search.png)
 
 Browser executed the payload immediately on search, producing a JavaScript alert box originating from localhost:3000:
 images/04-xss-search.png
