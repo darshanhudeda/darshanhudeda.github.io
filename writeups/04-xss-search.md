@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Reflected/DOM-Based XSS in Search Feature (OWASP Juice Shop)
 
 ## Objective
