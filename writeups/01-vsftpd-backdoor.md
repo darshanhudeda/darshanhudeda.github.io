@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # vsftpd 2.3.4 Backdoor (CVE-2011-2523)
 
 ## Objective
