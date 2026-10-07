@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # UnrealIRCd 3.2.8.1 Backdoor (CVE-2010-2075)
 
 ## Objective
