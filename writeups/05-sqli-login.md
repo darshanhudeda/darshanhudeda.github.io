@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SQL Injection Authentication Bypass (OWASP Juice Shop)
 
 ## Objective
