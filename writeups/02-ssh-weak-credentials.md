@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SSH Weak Credentials & Legacy Crypto
 
 ## Objective
